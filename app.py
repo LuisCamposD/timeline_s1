@@ -13,22 +13,22 @@ st.write(
 )
 
 # --------------------------------------------------------------------
-# 1) IMÁGENES DEL TIMELINE (YA CON TUS URLs)
+# 1) IMÁGENES DEL TIMELINE (TUS ARCHIVOS EN GITHUB)
 # --------------------------------------------------------------------
 IMAGES = [
-    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img1.png",  # punto 1
-    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img2.jpg",  # punto 2
-    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img3.png",  # punto 3
-    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img4.png",  # punto 4
-    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img5.png",  # punto 5
+    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img1.jpg",
+    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img2.PNG",
+    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img3.jpg",
+    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img4.png",
+    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img5.png",
 ]
 
 CAPTIONS = [
     "Años 80–90: enfoque básico",
-    "Años 2000: apertura y exposición",
+    "Años 2000: apertura comercial y mayor exposición al dólar",
     "2008–2012: crisis y gestión del riesgo",
-    "2013–2019: digitalización y analítica",
-    "2020 en adelante: IA y decisiones inteligentes",
+    "2013–2019: digitalización, BI y monitoreo diario del tipo de cambio",
+    "2020 en adelante: disrupciones globales, analítica avanzada e IA",
 ]
 
 # --------------------------------------------------------------------
