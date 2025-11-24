@@ -6,10 +6,10 @@ st.set_page_config(
     layout="centered"
 )
 
-st.title("💱 Timeline: Volatilidad del tipo de cambio en Compras y Logística")
+st.title("💱 Timeline: Evolución del análisis de la volatilidad del tipo de cambio")
 st.write(
-    "Mueve el slider para ver cómo la volatilidad del tipo de cambio impacta "
-    "las compras, las negociaciones con proveedores y las decisiones del área de logística."
+    "Mueve el slider para ver cómo, a lo largo de los años, ha evolucionado el análisis "
+    "de la volatilidad del tipo de cambio y su impacto en el área de Compras y Logística."
 )
 
 # --------------------------------------------------------------------
@@ -18,87 +18,87 @@ st.write(
 IMAGES = [
     "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img1.png",  # punto 1
     "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img2.jpg",  # punto 2
-    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img3.png",  # sube esta
-    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img4.png",  # sube esta
-    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img5.png",  # sube esta
+    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img3.png",  # punto 3
+    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img4.png",  # punto 4
+    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img5.png",  # punto 5
 ]
 
 CAPTIONS = [
-    "Escenario estable",
-    "Inicio de la volatilidad",
-    "Impacto en negociaciones",
-    "Estrategias de mitigación",
-    "Madurez: analítica e IA",
+    "Años 80–90: enfoque básico",
+    "Años 2000: apertura y exposición",
+    "2008–2012: crisis y gestión del riesgo",
+    "2013–2019: digitalización y analítica",
+    "2020 en adelante: IA y decisiones inteligentes",
 ]
 
 # --------------------------------------------------------------------
-# 2) CONTENIDO DEL TIMELINE
+# 2) CONTENIDO DEL TIMELINE (EVOLUCIÓN HISTÓRICA)
 # --------------------------------------------------------------------
 TIMELINE = [
     {
-        "titulo": "1️⃣ Escenario estable: planificación de compras",
+        "titulo": "1️⃣ Años 80–90: tipo de cambio y compras casi desconectados",
         "resumen": (
-            "El tipo de cambio se mueve poco y de forma predecible. "
-            "Compras puede planificar con relativa tranquilidad."
+            "En esta etapa el análisis de la volatilidad era mínimo. "
+            "El tipo de cambio se veía como un dato macro, no como un insumo clave "
+            "para las decisiones de logística."
         ),
         "bullets": [
-            "Presupuestos anuales definidos con un tipo de cambio referencial.",
-            "Contratos en soles o dólares sin mucha discusión sobre quién asume el riesgo.",
-            "Vigencia de cotizaciones más larga (7, 15 o 30 días).",
-            "Impacto del tipo de cambio en el costo total es bajo o manejable."
+            "Planeación de compras principalmente basada en experiencia y listas de precios históricas.",
+            "Poca apertura comercial: menor participación de proveedores internacionales.",
+            "El tipo de cambio se revisaba esporádicamente, no todos los días.",
+            "No existían políticas claras sobre quién asumía el riesgo cambiario (proveedor vs empresa).",
         ],
     },
     {
-        "titulo": "2️⃣ Inicio de la volatilidad: alertas para logística y compras",
+        "titulo": "2️⃣ Años 2000: apertura comercial y mayor exposición al dólar",
         "resumen": (
-            "El tipo de cambio empieza a subir y bajar con más fuerza en cortos periodos. "
-            "Compras y logística empiezan a sentir presión."
+            "Con la globalización y el aumento de importaciones, el tipo de cambio empieza "
+            "a impactar directamente los costos logísticos."
         ),
         "bullets": [
-            "Los proveedores acortan la vigencia de sus cotizaciones (24–48 horas).",
-            "Se vuelve más difícil sostener los precios aprobados en comités o budgets.",
-            "Órdenes de compra emitidas en soles se encarecen si el dólar sube antes del pago.",
-            "Aumentan las recotizaciones y los correos de ajuste de precio."
+            "Más compras en dólares (equipos, repuestos, tecnología, mobiliario importado).",
+            "Compras empieza a comparar cotizaciones en distintas monedas, pero el análisis es manual (Excel básico).",
+            "Se empiezan a usar tipos de cambio referenciales para presupuestos, pero sin escenarios de volatilidad.",
+            "Mayor sensibilidad en los márgenes: variaciones de centavos ya impactan el costo total de los proyectos.",
         ],
     },
     {
-        "titulo": "3️⃣ Impacto directo en negociaciones y contratos",
+        "titulo": "3️⃣ 2008–2012: crisis financiera y prioridad al riesgo cambiario",
         "resumen": (
-            "La volatilidad ya pega de frente en las negociaciones: "
-            "la discusión pasa a ser quién asume el riesgo cambiario."
+            "La crisis global y los saltos bruscos del tipo de cambio obligan a formalizar "
+            "la gestión del riesgo cambiario en compras y contratos."
         ),
         "bullets": [
-            "Proveedores piden cláusulas de ajuste: tipo de cambio al día de la factura o del pago.",
-            "Compras debe negociar bandas de tipo de cambio o topes de variación.",
-            "Se evalúa contratar en dólares vs soles según la naturaleza del gasto.",
-            "Mayor presión para cerrar rápido las aprobaciones internas (si no, el precio cambia)."
+            "Logística y Finanzas comienzan a trabajar juntos para definir TC de referencia y bandas de variación.",
+            "Aparecen cláusulas específicas: ajuste de precio por tipo de cambio, vigencia corta de cotizaciones.",
+            "Se analizan escenarios básicos: ¿qué pasa si el dólar sube 5%, 10% durante el proyecto?",
+            "Compras prioriza cerrar rápidamente órdenes de compra críticas para evitar descalce entre aprobación y pago.",
         ],
     },
     {
-        "titulo": "4️⃣ Estrategias de mitigación desde Compras / Logística",
+        "titulo": "4️⃣ 2013–2019: digitalización, BI y monitoreo diario del tipo de cambio",
         "resumen": (
-            "El área de compras ya no solo cotiza: gestiona el riesgo cambiario con estrategias "
-            "operativas y de negociación."
+            "Las empresas adoptan ERPs, dashboards y reportes automáticos. "
+            "El tipo de cambio se vuelve un indicador operativo para logística."
         ),
         "bullets": [
-            "Compras anticipadas o consolidadas para aprovechar momentos de tipo de cambio favorable.",
-            "Coordinación con Finanzas para usar tipos de cambio forward o proyecciones oficiales.",
-            "Diversificación de proveedores y monedas (no depender solo de USD).",
-            "Cláusulas de revisión de precios con reglas claras y documentadas."
+            "Dashboards de compras que muestran el impacto del tipo de cambio en el presupuesto y en el costo por contrato.",
+            "Actualización diaria del tipo de cambio en sistemas (ERP) y en las plantillas de cuadros comparativos.",
+            "Uso de modelos estadísticos simples para proyectar TC anual y armar presupuestos más realistas.",
+            "Compras empieza a definir estrategias: adelantar o postergar compras según tendencias de tipo de cambio.",
         ],
     },
     {
-        "titulo": "5️⃣ Madurez: uso de analítica e IA para decidir cuándo y cómo comprar",
+        "titulo": "5️⃣ 2020 en adelante: disrupciones globales, analítica avanzada e IA",
         "resumen": (
-            "La volatilidad se gestiona de forma más sofisticada: se usan datos, analítica "
-            "e incluso IA para decidir el mejor momento y la mejor forma de comprar."
+            "Con la pandemia y los choques globales, la volatilidad del tipo de cambio se combina con "
+            "rupturas de cadena de suministro. Compras necesita decisiones más inteligentes y rápidas."
         ),
         "bullets": [
-            "Modelos que simulan escenarios de tipo de cambio y su impacto en el costo total de compra.",
-            "Priorización de órdenes críticas vs postergables según el riesgo cambiario.",
-            "Dashboards para ver el impacto del tipo de cambio en presupuesto y margen.",
-            "IA para sugerir estrategias: comprar ahora, negociar en otra moneda, "
-            "fraccionar vs consolidar compras, etc."
+            "Uso de analítica avanzada e IA para simular escenarios de tipo de cambio y su efecto en costos logísticos.",
+            "Modelos que recomiendan: comprar ahora vs esperar, cambiar de proveedor, negociar en otra moneda o ajustar incoterms.",
+            "Integración de datos de mercado (TC, commodities, fletes internacionales) con datos internos de consumo y stock.",
+            "El rol de Compras/Logística evoluciona: de ejecutor de órdenes a gestor estratégico del riesgo cambiario y de suministro.",
         ],
     },
 ]
