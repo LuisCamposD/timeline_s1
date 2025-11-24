@@ -13,28 +13,27 @@ st.write(
 )
 
 # --------------------------------------------------------------------
-# 1) IMÁGENES DEL TIMELINE
+# 1) IMÁGENES DEL TIMELINE (YA CON TUS URLs)
 # --------------------------------------------------------------------
-# Reemplaza USUARIO, REPO y BRANCH por los tuyos.
-# Ejemplo:
-#   USUARIO = "LuisCamposD"
-#   REPO   = "Sesion1-Isil"
-#   BRANCH = "main"
-#
-# Y reemplaza "img1.png"... por los nombres reales dentro de /timeline_images
-
 IMAGES = [
-    "https://raw.githubusercontent.com/USUARIO/REPO/BRANCH/timeline_images/img1.png",  # Fase 1
-    "https://raw.githubusercontent.com/USUARIO/REPO/BRANCH/timeline_images/img2.png",  # Fase 2
-    "https://raw.githubusercontent.com/USUARIO/REPO/BRANCH/timeline_images/img3.png",  # Fase 3
-    "https://raw.githubusercontent.com/USUARIO/REPO/BRANCH/timeline_images/img4.png",  # Fase 4
-    "https://raw.githubusercontent.com/USUARIO/REPO/BRANCH/timeline_images/img5.png",  # Fase 5
+    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img1.png",  # punto 1
+    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img2.jpg",  # punto 2
+    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img3.png",  # sube esta
+    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img4.png",  # sube esta
+    "https://raw.githubusercontent.com/LuisCamposD/timeline_s1/main/timeline_images/img5.png",  # sube esta
+]
+
+CAPTIONS = [
+    "Escenario estable",
+    "Inicio de la volatilidad",
+    "Impacto en negociaciones",
+    "Estrategias de mitigación",
+    "Madurez: analítica e IA",
 ]
 
 # --------------------------------------------------------------------
-# 2) CONTENIDO DEL TIMELINE (VOLATILIDAD TC EN COMPRAS/LOGÍSTICA)
+# 2) CONTENIDO DEL TIMELINE
 # --------------------------------------------------------------------
-
 TIMELINE = [
     {
         "titulo": "1️⃣ Escenario estable: planificación de compras",
@@ -59,7 +58,7 @@ TIMELINE = [
             "Los proveedores acortan la vigencia de sus cotizaciones (24–48 horas).",
             "Se vuelve más difícil sostener los precios aprobados en comités o budgets.",
             "Órdenes de compra emitidas en soles se encarecen si el dólar sube antes del pago.",
-            "Aumentan las re–cotizaciones y los correos de ajuste de precio."
+            "Aumentan las recotizaciones y los correos de ajuste de precio."
         ],
     },
     {
@@ -69,7 +68,7 @@ TIMELINE = [
             "la discusión pasa a ser quién asume el riesgo cambiario."
         ),
         "bullets": [
-            "Proveedores piden cláusulas de ajuste: 'tipo de cambio al día de la factura o del pago'.",
+            "Proveedores piden cláusulas de ajuste: tipo de cambio al día de la factura o del pago.",
             "Compras debe negociar bandas de tipo de cambio o topes de variación.",
             "Se evalúa contratar en dólares vs soles según la naturaleza del gasto.",
             "Mayor presión para cerrar rápido las aprobaciones internas (si no, el precio cambia)."
@@ -84,8 +83,8 @@ TIMELINE = [
         "bullets": [
             "Compras anticipadas o consolidadas para aprovechar momentos de tipo de cambio favorable.",
             "Coordinación con Finanzas para usar tipos de cambio forward o proyecciones oficiales.",
-            "Diversificación de proveedores y monedas (por ejemplo, no depender solo de USD).",
-            "Negociación de cláusulas de revisión de precios con reglas claras y documentadas."
+            "Diversificación de proveedores y monedas (no depender solo de USD).",
+            "Cláusulas de revisión de precios con reglas claras y documentadas."
         ],
     },
     {
@@ -97,25 +96,16 @@ TIMELINE = [
         "bullets": [
             "Modelos que simulan escenarios de tipo de cambio y su impacto en el costo total de compra.",
             "Priorización de órdenes críticas vs postergables según el riesgo cambiario.",
-            "Dashboards para ver el impacto del tipo de cambio en el presupuesto y en el margen del negocio.",
-            "Integración con IA para sugerir estrategias: comprar ahora, negociar en otra moneda, "
+            "Dashboards para ver el impacto del tipo de cambio en presupuesto y margen.",
+            "IA para sugerir estrategias: comprar ahora, negociar en otra moneda, "
             "fraccionar vs consolidar compras, etc."
         ],
     },
 ]
 
-CAPTIONS = [
-    "Escenario estable",
-    "Inicio de la volatilidad",
-    "Impacto en negociaciones",
-    "Estrategias de mitigación",
-    "Madurez: analítica e IA",
-]
-
 # --------------------------------------------------------------------
 # 3) SLIDER DEL TIMELINE
 # --------------------------------------------------------------------
-
 step = st.slider(
     "Selecciona la etapa del timeline:",
     min_value=1,
@@ -129,7 +119,6 @@ item = TIMELINE[idx]
 
 st.subheader(item["titulo"])
 
-# Imagen asociada a ese punto
 st.image(
     IMAGES[idx],
     caption=CAPTIONS[idx],
@@ -142,5 +131,4 @@ st.markdown("**¿Qué pasa en esta etapa?**")
 for bullet in item["bullets"]:
     st.markdown(f"- {bullet}")
 
-# Barra de progreso “visual” del avance en el timeline
 st.progress(idx / 4)
